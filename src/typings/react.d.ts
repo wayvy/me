@@ -1,6 +1,8 @@
-interface LinkImgProps {
-  href: string;
-  src: string;
-  text?: string;
-  alt?: string;
+interface SectionProps {
+  name: string;
+  children: React.ReactNode;
+}
+
+interface ListProps {
+  list: string[][];
 }
