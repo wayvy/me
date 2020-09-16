@@ -9,6 +9,7 @@ import { About } from './containers/About';
 import { Init } from './components/Init';
 import { Header } from './components/Header';
 import { Nav } from './components/Nav';
+import { Footer } from './components/Footer';
 
 const useStyles = createUseStyles((theme: Theme) => ({
   app: {},
@@ -16,24 +17,26 @@ const useStyles = createUseStyles((theme: Theme) => ({
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     const handleScroll = () => {
       dispatch({ type: ActionTypes.SCROLL, payload: { position: window.scrollY } });
-      
+
       let scrollTop = document.documentElement.scrollTop;
       let offsetHeight = document.documentElement.offsetHeight;
       // Safari fix
-      if(scrollTop === 0 || offsetHeight === 0){
+      if (scrollTop === 0 || offsetHeight === 0) {
         scrollTop = document.body.scrollTop;
-        offsetHeight = document.body.offsetHeight
+        offsetHeight = document.body.offsetHeight;
       }
       const offset = scrollTop + window.innerHeight;
-      if (offset + 200 >= offsetHeight) { dispatch({ type: ActionTypes.AT_BOTTOM }) };
+      if (offset + 200 >= offsetHeight) {
+        dispatch({ type: ActionTypes.AT_BOTTOM });
+      }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   });
 
   const style = {};
@@ -44,13 +47,15 @@ const App: React.FC = () => {
     <div className={classes.app}>
       <Init />
 
-      <Header/>
-      <Nav/>
+      <Header />
+      <Nav />
 
       <Switch>
-        <Route exact path="/" component={ Main } />
-        <Route path="/about" component={ About } />
+        <Route exact path="/" component={Main} />
+        <Route path="/about" component={About} />
       </Switch>
+
+      <Footer />
     </div>
   );
 };
