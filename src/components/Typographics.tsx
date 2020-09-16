@@ -2,6 +2,9 @@ import React from 'react';
 import { useTheme, createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles(theme => ({
+  h1: {
+    fontSize: '1.5rem',
+  },
   h2: {
     padding: '0 1rem',
     margin: '6rem 0 2rem 0',
@@ -9,6 +12,14 @@ const useStyles = createUseStyles(theme => ({
     fontWeight: 'bolder',
   }
 }));
+
+const H1: React.FC<React.ReactNode> = ({ children }) => {
+  const style = {};
+  const theme = useTheme();
+  const classes = useStyles({ theme, ...style });
+
+  return <h1 className={ classes.h1 }>{ children }</h1>
+}
 
 const H2: React.FC<React.ReactNode> = ({ children }) => {
   const style = {};
@@ -18,4 +29,4 @@ const H2: React.FC<React.ReactNode> = ({ children }) => {
   return <h2 className={ classes.h2 }>{ children }</h2>
 }
 
-export { H2 }
+export { H1, H2 }
