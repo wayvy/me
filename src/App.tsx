@@ -2,7 +2,6 @@ import React from 'react';
 import { createUseStyles, useTheme } from 'react-jss';
 
 import { Init } from './components/Init';
-import { Example } from './containers/Example';
 
 const useStyles = createUseStyles((theme: Theme) => ({
   app: {
@@ -20,7 +19,6 @@ const App: React.FC = () => {
   return (
     <div className={classes.app}>
       <Init />
-      <Example />
     </div>
   );
 };
