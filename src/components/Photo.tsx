@@ -42,31 +42,32 @@ const useStyles = createUseStyles((theme: Theme) => ({
     filter: props => props.imgFilter,
     transition: theme.transition,
     margin: '.5rem 0 1rem 0',
-  }
+  },
 }));
 
 const Photo: React.FC = () => {
-  const { bottom } = useSelector((state: RootState) => ({ bottom: state.ui.bottom }), shallowEqual );
+  const { bottom } = useSelector((state: RootState) => ({ bottom: state.ui.bottom }), shallowEqual);
   const style = {
     spanWidth: '0',
     spanPadding: '0',
     spanOverflow: 'hidden',
     imgFilter: 'grayscale(1)',
-  }
-  if(bottom){
+  };
+  if (bottom) {
     style.spanWidth = '15rem';
     style.spanPadding = '1rem';
     style.spanOverflow = 'visible';
     style.imgFilter = 'grayscale(0)';
-
   }
   const theme = useTheme();
   const classes = useStyles({ theme, ...style });
 
-  return <div className={ classes.photo }>
-    <span className={ classes.span }>Hire me!</span>
-    <img src={ photo } className={ classes.photoImg } alt='Sergey Gromov'/>
-  </div>
-}
+  return (
+    <div className={classes.photo}>
+      <span className={classes.span}>Hire me!</span>
+      <img src={photo} className={classes.photoImg} alt="Sergey Gromov" />
+    </div>
+  );
+};
 
-export { Photo }
+export { Photo };
