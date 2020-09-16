@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/wayvy/typescript-react-redux-jss-boilerplate.svg?branch=master)](https://travis-ci.org/wayvy/typescript-react-redux-jss-boilerplate)
-## Typescript React Redux JSS Boilerplate
+[![Build Status](https://travis-ci.org/wayvy/me.svg?branch=master)](https://travis-ci.org/wayvy/me)
+## WAYVY
 ### Scripts
 
 #### Run webpack server on localhost:9000
