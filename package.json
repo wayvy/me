@@ -1,0 +1,48 @@
+{
+  "name": "typescript-react-redux-jss-boilerplate",
+  "version": "0.0.1",
+  "description": "Typed React / Redux / JSS boilerplate",
+  "main": "./src/index.ts",
+  "repository": "https://github.com/wayvy/typescript-react-redux-jss-boilerplate",
+  "author": "Sergey Gromov <sendtogromov@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "webpack-dev-server",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "prettier:check": "prettier --config .prettierrc ./**/**.{ts,tsx} --check",
+    "prettier:write": "prettier --config .prettierrc ./**/**.{ts,tsx} --write"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-jss": "^10.4.0",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.10.1",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/webpack-env": "^1.15.2",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "prettier": "^2.1.2",
+    "redux-devtools-extension": "^2.13.8",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
