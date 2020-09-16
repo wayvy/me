@@ -1,5 +1,5 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
+import { createUseStyles, useTheme } from 'react-jss';
 
 import { Hr } from './Hr';
 
@@ -19,7 +19,10 @@ const useStyles = createUseStyles((theme: Theme) => ({
 }));
 
 const List: React.FC<ListProps> = ({ list }) => {
-  const classes = useStyles();
+  const style = {};
+  const theme = useTheme();
+  const classes = useStyles({ theme, ...style });
+
   return (
     <div className={classes.list}>
       {list.map((subList, i) => (
