@@ -1,9 +1,9 @@
 {
-  "name": "typescript-react-redux-jss-boilerplate",
+  "name": "me",
   "version": "0.0.1",
-  "description": "Typed React / Redux / JSS boilerplate",
+  "description": "https://wayvy.me site generator",
   "main": "./src/index.ts",
-  "repository": "https://github.com/wayvy/typescript-react-redux-jss-boilerplate",
+  "repository": "https://github.com/wayvy/me",
   "author": "Sergey Gromov <sendtogromov@gmail.com>",
   "license": "MIT",
   "scripts": {
