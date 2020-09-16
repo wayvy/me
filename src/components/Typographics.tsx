@@ -18,6 +18,20 @@ const useStyles = createUseStyles((theme: Theme) => ({
     padding: '.25rem .5rem .25rem 1rem',
     fontWeight: 'normal',
   },
+  p: {
+    margin: '1rem .5rem 1rem 1.5rem',
+    textIndent: '1.5rem',
+    letterSpacing: '2px',
+    hyphens: 'auto',
+  },
+  a: {
+    textDecoration: 'none',
+    borderBottom: `${theme.borderThickness} dashed ${theme.colorSecond}`,
+    '&:hover': {
+      color: theme.colorPrimary,
+      borderBottom: `${theme.borderThickness} dashed ${theme.colorPrimary}`,
+    },
+  },
 }));
 
 const H1: React.FC<React.ReactNode> = ({ children }) => {
@@ -40,7 +54,28 @@ const H3: React.FC<React.ReactNode> = ({ children }) => {
   const style = {};
   const theme = useTheme();
   const classes = useStyles({ theme, ...style });
+
   return <h3 className={classes.h3}>{children}</h3>;
 };
 
-export { H1, H2, H3 };
+const Paragraph: React.FC<React.ReactNode> = ({ children }) => {
+  const style = {};
+  const theme = useTheme();
+  const classes = useStyles({ theme, ...style });
+
+  return <p className={classes.p}>{children}</p>;
+};
+
+const Link: React.FC<LinkProps> = ({ href, children }) => {
+  const style = {};
+  const theme = useTheme();
+  const classes = useStyles({ theme, ...style });
+
+  return (
+    <a href={href} className={classes.a}>
+      {children}
+    </a>
+  );
+};
+
+export { H1, H2, H3, Paragraph, Link };

@@ -6,3 +6,8 @@ interface SectionProps {
 interface ListProps {
   list: string[][];
 }
+
+interface LinkProps {
+  href: string;
+  children: React.ReactNode;
+}
