@@ -7,7 +7,7 @@ const colors = {
   backgroundPrimary: { h: 57, s: 82, l: 4 },
   backgroundContrast: { h: 0, s: 0, l: 0 },
   highlight: { h: 44, s: 81, l: 67 },
-}
+};
 
 const coreTheme = {
   colorPrimary: hslToHex(colors.primary),
@@ -19,7 +19,7 @@ const coreTheme = {
   transition: '.5s ease',
   borderRadius: '4px',
   borderThickness: '1px',
-  maxWidth: '768px'
-}
+  maxWidth: '768px',
+};
 
 export { coreTheme };

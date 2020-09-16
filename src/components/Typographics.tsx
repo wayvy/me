@@ -10,7 +10,7 @@ const useStyles = createUseStyles(theme => ({
     margin: '6rem 0 2rem 0',
     fontSize: '3rem',
     fontWeight: 'bolder',
-  }
+  },
 }));
 
 const H1: React.FC<React.ReactNode> = ({ children }) => {
@@ -18,15 +18,15 @@ const H1: React.FC<React.ReactNode> = ({ children }) => {
   const theme = useTheme();
   const classes = useStyles({ theme, ...style });
 
-  return <h1 className={ classes.h1 }>{ children }</h1>
-}
+  return <h1 className={classes.h1}>{children}</h1>;
+};
 
 const H2: React.FC<React.ReactNode> = ({ children }) => {
   const style = {};
   const theme = useTheme();
   const classes = useStyles({ theme, ...style });
 
-  return <h2 className={ classes.h2 }>{ children }</h2>
-}
+  return <h2 className={classes.h2}>{children}</h2>;
+};
 
-export { H1, H2 }
+export { H1, H2 };

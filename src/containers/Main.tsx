@@ -17,10 +17,12 @@ const Main: React.FC<React.FC> = ({ children }) => {
   const theme = useTheme();
   const classes = useStyles({ theme, ...style });
 
-  return <main className={ classes.main }>
-    <H2>No one knows this place</H2>
-    { children }
-  </main>;
+  return (
+    <main className={classes.main}>
+      <H2>No one knows this place</H2>
+      {children}
+    </main>
+  );
 };
 
 export { Main };

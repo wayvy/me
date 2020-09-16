@@ -15,7 +15,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
     transition: theme.transition,
     '&:hover': {
       background: theme.backgroundPrimary,
-    }
+    },
   },
 }));
 
@@ -27,7 +27,11 @@ const ButtonNavToggle = () => {
   const theme = useTheme();
   const classes = useStyles({ theme, ...style });
 
-  return <button onClick={ handleNavToggle } className={ classes.buttonNav }>links</button>
-}
+  return (
+    <button onClick={handleNavToggle} className={classes.buttonNav}>
+      links
+    </button>
+  );
+};
 
-export { ButtonNavToggle }
+export { ButtonNavToggle };

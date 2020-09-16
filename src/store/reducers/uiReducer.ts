@@ -12,15 +12,15 @@ const uiReducer = (state = defaultUiState, action: UiActions): UiState => {
         position: action.payload.position,
       };
     case ActionTypes.NAV_TOGGLE:
-        return {
-          ...state,
-          navToggle: !state.navToggle
-        }
+      return {
+        ...state,
+        navToggle: !state.navToggle,
+      };
     case ActionTypes.AT_BOTTOM:
       return {
         ...state,
-        bottom: true
-      }
+        bottom: true,
+      };
     default:
       return state;
   }

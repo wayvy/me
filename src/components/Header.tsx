@@ -19,7 +19,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
   logo: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   logoLink: {
     height: '2rem',
@@ -31,8 +31,8 @@ const useStyles = createUseStyles((theme: Theme) => ({
     '&:hover': {
       transform: 'rotate(315deg) scale(1.25)',
       background: theme.backgroundPrimary,
-    }
-  }
+    },
+  },
 }));
 
 const Header: React.FC = () => {
@@ -40,16 +40,18 @@ const Header: React.FC = () => {
   const theme = useTheme();
   const classes = useStyles({ theme, ...style });
 
-  return <header className={ classes.header }>
-    <div className={ classes.logo }>
-      <NavLink to='/' className={ classes.logoLink }>
-        <img src={ logo } className={ classes.logoImg } alt='wayvy' />
-      </NavLink>
+  return (
+    <header className={classes.header}>
+      <div className={classes.logo}>
+        <NavLink to="/" className={classes.logoLink}>
+          <img src={logo} className={classes.logoImg} alt="wayvy" />
+        </NavLink>
 
-      <H1>Wayvy</H1>
-    </div>
-    <ButtonNavToggle/>
-  </header>
-}
+        <H1>Wayvy</H1>
+      </div>
+      <ButtonNavToggle />
+    </header>
+  );
+};
 
-export { Header }
+export { Header };

@@ -36,32 +36,34 @@ const useStyles = createUseStyles((theme: Theme) => ({
     width: '100vw',
     position: 'fixed',
     cursor: 'pointer',
-  }
+  },
 }));
 
 const Nav: React.FC = () => {
-  const { navToggle } = useSelector((state: RootState) => ({ navToggle: state.ui.navToggle }), shallowEqual );
+  const { navToggle } = useSelector((state: RootState) => ({ navToggle: state.ui.navToggle }), shallowEqual);
 
-  const style = { height: '0' }
+  const style = { height: '0' };
   if (navToggle) style.height = '7.5rem';
 
   const theme = useTheme();
   const classes = useStyles({ theme, ...style });
 
-  return <nav>
-    <ul className={ classes.navList }>
-      <li className={ classes.navItem }>
-        <NavLink to='/' className={ classes.navLink }>
-          <span className={ classes.navLinkSpan }>Home</span>
-        </NavLink>
-      </li>
-      <li className={ classes.navItem }>
-        <NavLink to='/about' className={ classes.navLink }>
-          <span className={ classes.navLinkSpan }>About</span>
-        </NavLink>
-      </li>
-    </ul>
-  </nav>
-}
+  return (
+    <nav>
+      <ul className={classes.navList}>
+        <li className={classes.navItem}>
+          <NavLink to="/" className={classes.navLink}>
+            <span className={classes.navLinkSpan}>Home</span>
+          </NavLink>
+        </li>
+        <li className={classes.navItem}>
+          <NavLink to="/about" className={classes.navLink}>
+            <span className={classes.navLinkSpan}>About</span>
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-export { Nav }
+export { Nav };

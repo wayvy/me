@@ -7,8 +7,7 @@ declare const enum ActionTypes {
 
 declare type AppActions = { type: ActionTypes.INIT; payload: InitPayload };
 
-declare type UiActions = 
+declare type UiActions =
   | { type: ActionTypes.SCROLL; payload: ScrollPayload }
   | { type: ActionTypes.NAV_TOGGLE }
-  | { type: ActionTypes.AT_BOTTOM }
-  
+  | { type: ActionTypes.AT_BOTTOM };
