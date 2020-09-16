@@ -1,14 +1,14 @@
 import React from 'react';
 import { createUseStyles, useTheme } from 'react-jss';
+import { Route, Switch } from 'react-router-dom';
+
+import { Main } from './containers/Main';
+import { About } from './containers/About';
 
 import { Init } from './components/Init';
 
 const useStyles = createUseStyles((theme: Theme) => ({
-  app: {
-    margin: '0 auto',
-    padding: '0 .25rem',
-    maxWidth: theme.maxWidth,
-  },
+  app: {},
 }));
 
 const App: React.FC = () => {
@@ -19,6 +19,10 @@ const App: React.FC = () => {
   return (
     <div className={classes.app}>
       <Init />
+      <Switch>
+        <Route exact path="/" component={ Main } />
+        <Route path="/about" component={ About } />
+      </Switch>
     </div>
   );
 };
