@@ -11,3 +11,8 @@ interface LinkProps {
   href: string;
   children: React.ReactNode;
 }
+
+interface ArticleProps {
+  name?: string;
+  children: React.ReactNode;
+}
