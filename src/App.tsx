@@ -27,4 +27,8 @@ const App: React.FC = () => {
   );
 };
 
+console.log('HIRE ME!');
+console.log('📩  📩  📩');
+console.log('sendtogromov@gmail.com');
+
 export { App };
