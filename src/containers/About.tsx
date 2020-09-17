@@ -52,8 +52,7 @@ const About: React.FC = () => {
           <Link href="https://unona.su">Последний заказ</Link>.
         </Paragraph>
         <Paragraph>
-          За этот год изучил React, Redux, TypeScript и Webpack. Сейчас разбираюсь с <em>JSS</em>, <em>Canvas</em> и{' '}
-          <em>GraphQL</em>.
+          За этот год изучил React, Redux, TypeScript и Webpack. Сейчас разбираюсь с <em>Canvas</em> и <em>GraphQL</em>.
         </Paragraph>
         <Paragraph>
           <Link href="https://github.com/wayvy">Мой github</Link>.
