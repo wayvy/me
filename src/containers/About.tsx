@@ -9,7 +9,12 @@ import { Photo } from '../components/Photo';
 import { Art } from '../components/Art';
 
 const useStyles = createUseStyles((theme: Theme) => ({
-  about: {},
+  about: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '0 auto',
+    maxWidth: theme.maxWidth,
+  },
 }));
 
 const About: React.FC = () => {
