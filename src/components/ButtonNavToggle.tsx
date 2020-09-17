@@ -19,7 +19,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
   },
 }));
 
-const ButtonNavToggle = () => {
+const ButtonNavToggle: React.FC = () => {
   const dispatch = useDispatch();
   const handleNavToggle = () => dispatch({ type: ActionTypes.NAV_TOGGLE });
 
